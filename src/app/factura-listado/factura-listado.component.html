@@ -1,0 +1,15 @@
+<div class="container">
+  <button type="button" class="btn btn-primary" routerLink="/crearfactura">Crear factura</button>
+  <div class="listado-factura">
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between" *ngFor="let factura of facturas">
+        {{factura.id}} - {{factura.concepto}}
+        <div class="btn-group" role="group" aria-label="Basic example">
+          <a type="button" class="btn btn-primary btn-sm">+</a>
+          <a type="button" class="btn btn-danger btn-sm"
+            [routerLink]="['/editarfactura', factura.id]">Editar</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Operación</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let usuario of usuarios">
+      <th scope="row">{{usuario.id}}</th>
+      <td>{{usuario.nombre}}</td>
+      <td>{{usuario.apellidos}}</td>
+      <td>{{usuario.edad}}</td>
+      <td>
+        <a type="button" class="btn btn-primary"
+          [routerLink]="['/editarusuario', usuario.id]">Editar</a>
+      </td>
+    </tr>
+  </tbody>
+</table>

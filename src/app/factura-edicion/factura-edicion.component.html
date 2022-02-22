@@ -1,0 +1,36 @@
+<div class="usuario">
+  <form #form="ngForm" (ngSubmit)="guardarFactura(form)" novalidate>
+    <div class="mb-3">
+      <label for="concepto" class="form-label">Concepto</label>
+      <input
+        type="text"
+        class="form-control"
+        id="concepto"
+       [ngModel]="factura.concepto" name="concepto"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="cif" class="form-label">Cif</label>
+      <input
+        type="text"
+        class="form-control"
+        id="cif"
+       [ngModel]="factura.cif" name="cif"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="importe" class="form-label">Importe</label>
+      <input
+        type="number"
+        class="form-control"
+        id="importe"
+       [ngModel]="factura.importe" name="importe"
+      />
+    </div>
+
+    <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+      <button type="submit" class="btn btn-primary">Guardar factura</button>
+      <button type="button" class="btn btn-danger" routerLink="/usuario">Cancelar</button>
+    </div>
+  </form>
+  </div>

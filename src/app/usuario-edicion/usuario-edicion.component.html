@@ -1,0 +1,39 @@
+<div class="usuario">
+<form #formUsuario="ngForm" (ngSubmit)="guardarUsuario(formUsuario)" novalidate>
+  <div class="mb-3">
+    <label for="nombre" class="form-label">Nombre</label>
+    <input
+      type="text"
+      class="form-control"
+      id="nombre"
+      aria-describedby="nombreHelp" [ngModel]="usuario.nombre" name="nombre"
+    />
+    <div id="nombreHelp" class="form-text">Introduce tu nombre.</div>
+  </div>
+  <div class="mb-3">
+    <label for="apellidos" class="form-label">Apellidos</label>
+    <input
+      type="text"
+      class="form-control"
+      id="apellidos"
+      aria-describedby="apellidosHelp" [ngModel]="usuario.apellidos" name="apellidos"
+    />
+    <div id="apellidosHelp" class="form-text">Introduce tus apellidos.</div>
+  </div>
+  <div class="mb-3">
+    <label for="edad" class="form-label">Edad</label>
+    <input
+      type="number"
+      class="form-control"
+      id="edad"
+      aria-describedby="edadHelp" [ngModel]="usuario.edad" name="edad"
+    />
+    <div id="edadHelp" class="form-text">Introduce tu edad.</div>
+  </div>
+
+  <div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+    <button type="submit" class="btn btn-primary">Guardar usuario</button>
+    <button type="button" class="btn btn-danger" routerLink="/usuario">Cancelar</button>
+  </div>
+</form>
+</div>
